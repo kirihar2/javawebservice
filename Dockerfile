@@ -1,3 +1,4 @@
-FROM openjdk:8
-COPY ./build/libs/java-project-0.0.1-SNAPSHOT.jar spring-boot.jar
-CMD java -jar spring-boot.jar
+FROM openjdk:8-jdk-alpine
+VOLUME /tmp
+COPY target/*.jar /app.jar
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","app.jar"]
