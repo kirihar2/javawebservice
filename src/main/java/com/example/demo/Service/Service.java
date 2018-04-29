@@ -24,7 +24,7 @@ public class Service {
         List<String> conversionCommand = new ArrayList<>();
         conversionCommand.add("gs");
         conversionCommand.add("-q");
-        conversionCommand.add("-r300");
+        conversionCommand.add("-r300"); 
         conversionCommand.add("-sDEVICE=tiffgray");
         conversionCommand.add("-o output/"+file.getOriginalFilename().substring(0,file.getOriginalFilename().length()-4)+"_300dpi.tif");
         conversionCommand.add("temp.pdf");
